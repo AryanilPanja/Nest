@@ -4,7 +4,7 @@ include frontend/Makefile
 include schema/Makefile
 
 build:
-	@docker compose build
+	@docker-compose build
 
 check-all: \
 	check-backend \
@@ -30,8 +30,8 @@ pre-commit:
 	@pre-commit run -a
 
 run:
-	@docker compose build
-	@docker compose up
+	@docker-compose build
+	@docker-compose up
 
 test-all: \
 	test-nest-app \
